@@ -1,0 +1,6 @@
+icons-*.png
+tab-bases-*.png
+labels/
+!labels/label_1.png
+tab-headers/
+!tab-headers/tab-header_1.png

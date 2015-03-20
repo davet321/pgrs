@@ -1,0 +1,18 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-08-27T17:00:00Z
+location: The Ark
+full_location: The Ark, 46 Frederick St, G1 2BS
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the Ark to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.

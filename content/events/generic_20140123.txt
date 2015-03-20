@@ -1,0 +1,24 @@
+---
+title: Bright Club Laugh and Learn
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: generic
+datetime: 2014-01-23T12:30:00Z
+endtime: 2014-01-23T13:30:00Z
+location: Graham Hills Room 511
+---
+<%= polaroid('brightclub.jpg', 'Bright Club') %>
+<%= render(:partial=>"event_info") %>
+
+PGRS's friends at Bright Club, Glasgow's finest purveyors of academic comedy, are back for another year, and if you've ever considered getting involved then they're planning a series of social events so you can find out more.
+
+More info can be found on the Facebook page for each event:
+
+* <span class="highlight">[West End Social](https://www.facebook.com/events/183170545226586)</span>
+* <span class="highlight">[Lunchtime seminar](https://www.facebook.com/events/420761648026367)</span>
+* <span class="highlight">[City Centre Social](https://www.facebook.com/events/200012640192079)</span>

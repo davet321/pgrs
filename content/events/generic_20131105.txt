@@ -1,0 +1,21 @@
+---
+title: Glasgow Green Fireworks
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: generic
+event_class: special
+datetime: 2013-11-05T17:00:00Z
+location: West Brewery
+---
+<%= polaroid('fireworks.png', 'Glasgow Green Fireworks') %>
+<%= render(:partial=>"event_info") %>
+
+Next week we're going to tie in our usual pub adventure with bonfire night by heading to West Brewery so we can drink beer while we watch the fireworks display at Glasgow green.
+
+Meet us at the big safety pin in Rottenrow Gardens and we'll walk there together.
+
+The time is liable to change, so keep an eye on our <span class="highlight">[Facebook event](https://www.facebook.com/events/396862650447731)</span>.

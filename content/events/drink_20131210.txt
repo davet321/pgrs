@@ -1,0 +1,22 @@
+---
+title: Christmas Market
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: drink
+datetime: 2013-12-10T17:15:00Z
+location: St Enoch Square
+---
+<%= polaroid('market.jpg', 'Sweets!') %>
+<%= render(:partial=>"event_info") %>
+
+Join us for a trip to the Christmas market for some mulled wine, food and sweets.
+
+We'll be meeting at the giant safety pin in Rottenrow Gardens to walk down as a group at about 5:15 pm.
+If you want to come later just head down yourself and keep an eye out for us there.
+
+Let us know if you're coming on the <span class="highlight">[Facebook event](https://www.facebook.com/events/431738676927910/)</span>.

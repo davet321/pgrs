@@ -1,0 +1,19 @@
+---
+title: Pub Quiz
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: drink
+datetime: 2013-10-17T18:30:00Z
+location: The Scene
+---
+<%= polaroid('quiz.jpg', 'Thinking caps on') %>
+<%= render(:partial=>"event_info") %>
+
+Following the Postgraduate Induction, we'll be holding a pub quiz in The Scene on Level 4 of the Union.
+Come along and meet (and beat) your fellow postgraduates, old and new.
+The time will be confirmed closer to the date, and there will *hopefully* be some free food beforehand.

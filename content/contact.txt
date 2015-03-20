@@ -1,0 +1,15 @@
+---
+title:       Contact
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab:         6
+---
+<%= polaroid('tshirt.jpg', 'Full clothing line available from your nearest friendly committee member') %>
+
+To get in touch with us, just drop us an <span class="highlight">[email](mailto:pgrs.strath@gmail.com)</span>.
+Alternatively, you can find us on <span class="highlight">[Facebook](http://www.facebook.com/PGRSstrath)</span> or <span class="highlight">[Twitter](http://www.twitter.com/PGRSstrath)</span>.
+You can also sign up for our mailing list by filling out the form below and we'll keep you up-to-date with all our plans.
+
+<iframe id="mailing_signup" src="https://docs.google.com/forms/d/1Cu9wkLVGdI9NWgg-9_CMKJZJvOVXXfR1lgYof1yUO1g/viewform?embedded=true#start=embed" width="230" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>

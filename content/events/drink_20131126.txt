@@ -1,0 +1,20 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-11-26T17:30:00Z
+location: The Station Bar
+full_location: The Station Bar, 55 Port Dundas Road, G4 0HF
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the pub to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.
+
+This week we'll be in The Station Bar, a pub with a long history and an excellent choice of real ales.

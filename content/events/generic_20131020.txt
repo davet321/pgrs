@@ -1,0 +1,26 @@
+---
+title: Provand's Lordship / St Mungo Museum
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: museum
+event_class: special
+datetime: 2013-10-20T13:00:00Z
+location: Provand's Lordship
+full_location: Provand's Lordship, 3 Castle St, G4 0RB
+---
+<%= polaroid('provands.jpg', 'Provand\'s Lorship and gardens', 'Credit: Kilnburn - http://commons.wikimedia.org/wiki/File:Provand%27s_Lordship,_Glasgow.jpg') %>
+<%= render(:partial=>"event_info") %>
+
+Come explore some of Glasgow's slightly less high-profile museums with PGRS.
+
+First up is the oldest house in Glasgow, <span class="highlight">[Provand's Lordship](http://www.glasgowlife.org.uk/museums/provands-lordship/Pages/default.aspx)</span>.
+This was built in 1471 and is one of only four medieval buildings in Glasgow.
+We'll meet outside the entrance at 1pm.
+
+After we've explored that, we'll head over to <span class="highlight">[St Mungo Museum of Religious Life and Art](http://www.glasgowlife.org.uk/museums/st-mungos/Pages/default.aspx)</span>, which has displays and artefacts for all the world's major religions and also tells the story of religion in the west of Scotland.
+
+Let us know if you're coming on our <span class="highlight">[Facebook event](https://www.facebook.com/events/220571698109751)</span>.

@@ -1,0 +1,20 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-09-17T17:00:00Z
+location: Meat Bar
+full_location: Meat Bar, 142 West Regent St, G2 2RQ
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the pub to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.
+
+This week we're at the <span class="highlight">[Meat Bar](https://www.facebook.com/meatbarglasgow)</span>, which promises great food and, more importantly, meat-based cocktails!

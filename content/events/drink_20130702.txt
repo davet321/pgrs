@@ -1,0 +1,16 @@
+---
+title:       Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-07-02T17:30:00Z
+location: The Arches
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+Pub Tuesday! This week: The Arches

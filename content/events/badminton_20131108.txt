@@ -1,0 +1,19 @@
+---
+title: Badminton
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: badminton
+datetime: 2013-11-08T17:00:00Z
+endtime: 2013-11-08T18:00:00Z
+location: Sports Hall
+---
+<%= polaroid('badminton.jpg', 'All set', 'Credit: Joyce Weaver \(CC BY-SA\) - http://www.flickr.com/photos/42758455@N08/4494312911/') %>
+<%= render(:partial=>"event_info") %>
+
+Drop-in for a social game of badminton.
+All skill levels welcome.
+This semester we should be playing every Friday from 5-6pm, but it's worth checking in our <span class="highlight">[Facebook group](https://www.facebook.com/groups/420102221422034/)</span> before-hand.

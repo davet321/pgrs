@@ -1,0 +1,42 @@
+---
+title:       About PGRS
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab:         5
+---
+<%= polaroid('star.jpg', 'Community Society of the Year 2013') %>
+
+## PGRS Founders' Welcome
+
+Welcome to PGRS (Postgraduate Researcher Society). We're Matt and April and we set up PGRS in July 2012 with the vision of empowering all PGR students, creating a university wide PGR community and making sure the PGR voice is heard and taken notice of.
+
+There are loads of reasons to get involved with PGRS whilst you are studying at Strathclyde. Not only is it the easiest way for you to meet other PGR students, make new friends and gain new skills but we are also here to ensure your research is as stress free as possible by making sure all the support you need is put in place at either the Union or the University.
+
+It is still early days for our society but even in our first year of existence we have made a massive impact to PGR -- union relations with successes including:
+
+ 1. New union policy for an annual PG Festival
+ 2. New union policy for a PGR welcome event in October
+ 3. A 141% increase of PGR students voting in union elections from 2012 to 2013
+ 4. A postgraduate officer on the Sports Union Exec
+ 5. Regular social events for all PGR students
+
+It can only get better and with your involvement, ideas and input PGRS will continue to grow and become more than we ever imagined it could be!
+
+There is so much more to a PhD than the walls around you. The word "university" is derived from the Latin universitas magistrorum et scholarium, which roughly means "community of teachers and scholars." Be part of that community.
+
+## Committee
+ * Felicity Carlysle -- President
+ * Iain Morrison -- Vice President
+ * David Thompson -- Treasurer
+ * Elisabeth Fraczek -- Events Officer
+ * Megan Heather -- PR Officer
+ * Naomi Aoife Bowers -- Secretary
+ * Ashleigh Logan -- RKEC Representative
+ * Steven Davies -- IT
+
+## Past Committee Members
+ * Matthew Banger -- President
+ * April Dunham -- Vice President
+ * Kerry Ferreira -- Events Officer

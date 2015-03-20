@@ -1,0 +1,16 @@
+---
+title: ~TITLE~
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: generic
+datetime: <%= datetime %>
+location: ~LOCATION~
+---
+<%%= polaroid('~IMAGE~.jpg', '~CAPTION~') %>
+<%%= render(:partial=>"event_info") %>
+
+~DESCRIPTION~

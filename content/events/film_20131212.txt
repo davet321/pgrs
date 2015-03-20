@@ -1,0 +1,23 @@
+---
+title: Christmas Film Night
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: film
+datetime: 2013-12-12T18:30:00Z
+location: The Lounge
+---
+<%= polaroid('christmas.png', 'Christmas Film night') %>
+<%= render(:partial=>"event_info") %>
+
+Pick your favourite Christmas movie and join us for the last PGRS Film Night this year.
+
+You'll find us at The Lounge on Level 5 in the Union.
+To celebrate Christmas and the end of the semester, we'll be organising free pizza for everyone.
+Come from 6:30ish if you want to order pizza or half 7 for the movie.
+
+Let us know if you're coming and vote to pick the film we'll be showing on the <span class="highlight">[Facebook event](https://www.facebook.com/events/1413577215544423/)</span>.

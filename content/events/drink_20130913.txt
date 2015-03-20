@@ -1,0 +1,28 @@
+---
+title: Paisley Beer Festival
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: drink
+datetime: 2013-09-13T17:00:00Z
+location: Paisley Town Hall
+full_location: Paisley Town Hall, Abbey Close, PA1 1EZ
+---
+<%= polaroid('paisley.jpg', 'The Scottish bar at Paisley Beer Festival') %>
+<%= render(:partial=>"event_info") %>
+
+With over 160 beers from around Scotland, plus more from England & across Europe, Paisley Beer Festival is Scotland's biggest, and PGRS will be making the short trip through to experience it.
+Come join us and celebrate the end of another week.
+
+We'll meet at the swimming pool entrance of the Royal College just after 5 and head down to Central Station together, but if you want to make your own way there later (or earlier!) that's fine too.
+The train takes 10-15 minutes to Paisley Gilmour St and there's usually about 8 an hour.
+The Town Hall's just a short walk from the station.
+
+Entry's &pound;5 (&pound;3 if you're a CAMRA member), which usually gets you a souvenir pint glass and programme.
+More info's at <span class="highlight">[the website](http://www.paisleybeerfestival.org.uk/)</span> (although the beer list's not out yet).
+
+Let us know if you're coming by signing up on <span class="highlight">[Facebook](https://www.facebook.com/events/510022235751174/)</span>.

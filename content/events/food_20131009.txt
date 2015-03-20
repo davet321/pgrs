@@ -1,0 +1,18 @@
+---
+title: Lunch
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: food
+datetime: 2013-10-09T12:30:00Z
+endtime: 2013-10-09T14:00:00Z
+location: Postgraduate Lounge
+---
+<%= polaroid('lunch.jpg', 'Over the Midweek Hump') %>
+<%= render(:partial=>"event_info") %>
+
+Celebrate the halfway point of the week by sharing lunch in the Postgraduate Lounge on Level 6 of the Union.
+If you need a key for the lounge, you can get one from Level 7.

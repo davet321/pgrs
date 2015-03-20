@@ -1,0 +1,19 @@
+---
+title:       Merchant City Festival
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: museum
+event_class: special
+datetime: 2013-07-27T12:00:00Z
+location: Merchant City
+---
+<%= polaroid('festival.jpg', 'Merchant City Festival') %>
+<%= render(:partial=>"event_info") %>
+
+Join us as we wander round the Merchant City Festival.
+We'll be starting in the market place at 12:00, but join us at any time.
+Get in contact through Facebook or Twitter to find us, or let us know you're coming beforehand and we'll give you our phone numbers.

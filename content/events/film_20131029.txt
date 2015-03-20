@@ -1,0 +1,32 @@
+---
+title: Halloween Film Night
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: film
+datetime: 2013-10-29T18:30:00Z
+location: The Lounge
+---
+<%= polaroid('halloween.png', 'Halloween Film night') %>
+<%= render(:partial=>"event_info") %>
+
+'And the Raven, never flitting, still is sitting, still is sitting
+On the pallid bust of Pallas just above my chamber door;
+And his eyes have all the seeming of a demon's that is dreaming,
+And the lamplight o'er him streaming throws his shadow on the floor;
+And my soul from out that shadow that lies floating on the floor
+Shall be lifted- nevermore!'
+[Edgar Allan Poe - The Raven]
+
+Are you in the mood to be scared out of your wits?
+PGRS presents a film night not suitable for the weak-hearted and scaredy-pants. Put on your best Halloween dress and you might even win a small prize.
+
+You'll find us at The Lounge in the Union. Those of you who are paying attention will realise that the lift doesn't stop at 5 and the stairs even jump from L4 to L6...
+This is your mantra from now on -- take the lift to six and the stairs down to 5!
+
+Come from 6.30ish if you want to order pizza or half 7 for the movie.
+Let us know if you're coming and make suggestions for the film on our <span class="highlight">[Facebook event](https://www.facebook.com/events/607363235973334/)</span>.

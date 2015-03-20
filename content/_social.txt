@@ -1,0 +1,16 @@
+---
+filter: erb
+---
+</div>
+
+<div id="social">
+    <h3>Contact</h3>
+    <p>To keep up with all our events and other news, sign up to our <span class="highlight"><a href="contact.html">mailing list</a></span> or keep an eye on Facebook or Twitter.</p>
+    <div>
+        <iframe id="facebook" src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FPGRSstrath&amp;width=240&amp;height=600&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=true&amp;appId=149117661896317" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <a id="twitter" class="twitter-timeline"  href="https://twitter.com/PGRSstrath"  data-widget-id="303890277037375490">Follow @PGRSstrath on Twitter</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</div>
+
+<div>

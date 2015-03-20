@@ -1,0 +1,20 @@
+---
+title: Film Night
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: film
+datetime: 2013-11-19T19:00:00Z
+location: The Lounge
+---
+<%= polaroid('anderson.jpg', 'Film night') %>
+<%= render(:partial=>"event_info") %>
+
+Join us for our monthly film night, in the Lounge on Level 5 of the Union (not the Postgraduate Lounge!).
+This month the theme is 'The Movies of Wes Anderson'.
+Come from 7ish if you want to order pizza beforehand or half 8 for the movie.
+Let us know if you're coming and vote to pick the film we'll be showing on the <span class="highlight">[Facebook event](https://www.facebook.com/events/182688285256486/)</span>.

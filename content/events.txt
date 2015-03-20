@@ -1,0 +1,36 @@
+---
+title:       Events
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab:         2
+---
+<%= polaroid('santa.jpg', 'PGRS do the Santa Dash') %>
+
+You can't spend your whole PhD locked in your lab.
+Luckily, PGRS are here to provide you with plenty of opportunities to get out and about:
+
+## One-off events
+
+Throughout the year we put on plenty of one-off and special events.
+Charity races, cocktail classes, rugby tournaments and the annual Postgraduate Festival are just a few of the events we've taken part in over the past year.
+We're always looking to put on more, so if you've got any ideas (or want to organise something yourself), just let us know, and we can help get things rolling.
+Keep an eye on the list below, or <span class="highlight">[Facebook](http://www.facebook.com/PGRSstrath)</span> and <span class="highlight">[Twitter](http://www.twitter.com/PGRSstrath)</span> to keep up with what we've got planned.
+
+## Regular events
+
+For those of you that can't make one off events you see advertised, fear no more because we have a number of different regular events!
+If sports are your thing then we have a pre booked badminton court every Monday from 5--6pm where you can come and enjoy a relaxed (or competitive) game of badminton and get to meet new people in the process.
+
+We also hold regular film nights which are usually shown in the student union and these have proven to be one of our most popular events.
+The theme and subsequent films being shown on the night is usually chosen by a poll on our Facebook page a week or so in advance.
+If you have a particular interest to watch a film then please let us know and we can arrange this if the theme and/or film prove to be popular then it will be shown!
+
+Tuesday nights are our pub social nights and the pub venue changes from week to week.
+We always try to bring you the best deals on food and drinks and will always let members know in advance where to find us!
+
+Halfway through the week we like to mark the occasion with a bit of a long lunch.
+Wednesdays 12--2pm we'll be in the Postgraduate Room on the 6th floor of the Union.
+
+<%= render(:partial=>"events_list", :locals => {:clazz => 'hide-events' }) %>

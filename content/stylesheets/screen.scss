@@ -1,0 +1,455 @@
+---
+filter: sass
+extension: css
+layout: nil
+---
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/utilities/sprites/base";
+@import "compass/utilities/sprites/sprite-img";
+@import "compass/typography/text/replacement";
+
+/* -------------------------------------------------------------------------*/
+/* Defaults */
+html {
+    background-color: $background-colour;
+}
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+@include establish-baseline(16px);
+#container {
+  @include container($total-columns, $medium, $full);
+}
+
+/* -------------------------------------------------------------------------*/
+/* Sprites */
+
+@mixin resize-sprite($map, $sprite, $percent) {
+  $spritePath:    sprite-path($map);
+  $spriteWidth:   image-width($spritePath);
+  $spriteHeight:  image-height($spritePath);
+  $width: image-width(sprite-file($map, $sprite));
+  $height: image-height(sprite-file($map, $sprite));
+
+  @include background-size(ceil($spriteWidth * ($percent/100)) ceil($spriteHeight * ($percent/100)));
+  width: ceil($width*($percent/100));
+  height: ceil($height*($percent/100));
+  background-position: 0 floor(nth(sprite-position($map, $sprite), 2)  * ($percent/100) );
+}
+
+$icons-72: sprite-map("icons-72/*.png");
+$icons-36: sprite-map("icons-36/*.png");
+$icons-24: sprite-map("icons-24/*.png");
+
+@each $sprite in sprite_names($icons-24) {
+    .icons-#{$sprite} {
+        display: inline-block;
+        padding: 0;
+        float: none;
+        vertical-align: bottom;
+        width: 24px;
+        height: 24px;
+        background: sprite-url($icons-24);
+        @include sprite-background-position($icons-24, $sprite);
+    }
+    body {
+        @include at-breakpoint($medium){
+            nav .icons-#{$sprite} {
+                display: block;
+                margin: 0 auto;
+                width: 36px;
+                height: 36px;
+                background: sprite-url($icons-36);
+                @include sprite-background-position($icons-36, $sprite);
+            }
+        }
+    }
+}
+
+$tab-bases: sprite-map("tab-bases/*.png");
+.tab-background, .tab-base { background: sprite-url($tab-bases); }
+
+/* -------------------------------------------------------------------------*/
+/* Header / Navigation */
+
+#spacer { height: rhythm(2); }
+
+#navigation {
+    background: $page-colour;
+    @include adjust-font-size-to(12px);
+}
+
+#logo-container {
+    float: left;
+    width: columns(3);
+    background-image: image-url('tab-headers/tab-header_1.png', false, false);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include pre(1);
+    position: relative;
+    top: rhythm(-2);
+    margin-bottom: rhythm(-2);
+    #logo-bg {
+        width: 100%;
+    }
+    h1 {
+        @include replace-text('../images/logo.png');
+        width: 100%;
+        height: rhythm(10);
+        background-size: 90%;
+    }
+    a { display: block; height: 100% }
+}
+
+nav {
+    float: left;
+    width: columns(4);
+    @include pre(1);
+    position: relative;
+    left: columns(1) + gutter();
+    li {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-top: rhythm(1/4);
+    }
+    @for $i from 1 through $tab-count {
+        li#tab-header-#{$i} { background-image: image-url('labels/label_#{$i}.png', false, false); }
+    }
+    a { display: block; color: black; text-decoration: none; }
+}
+
+
+#tab-backgrounds {
+    clear: both;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Content */
+
+#page {
+    @include paper();
+}
+
+#content {
+    padding-bottom: rhythm(1);
+}
+
+@for $i from 1 through $tab-count {
+    .borderimage {
+        #page.tab-active-#{$i}{
+            @include border-image(url("../images/borders/border_#{$i}.png") $border-width repeat);
+            @include at-breakpoint($medium){
+                border: none;
+                @include border-image(none);
+                #content { @include border-image(url("../images/borders/border_#{$i}.png") $border-width repeat); }
+            }
+        }
+    }
+    .no-borderimage {
+        #page.tab-active-#{$i}{
+            border-color: nth($tab-colours, $i);
+            @include at-breakpoint($medium){
+                border: none;
+                #content { border-color: nth($tab-colours, $i); }
+            }
+        }
+    }
+}
+
+.head {
+    margin-bottom: rhythm(1);
+    &:before {
+        content: '';
+        background: $page-colour;
+        height: rhythm(1);
+        display: block;
+    }
+}
+
+body { // There's a bug in SASS which means you can't use the ie-fallback at the top level
+    @include at-breakpoint($medium){
+        // Reset layout properties from default settings
+        #spacer { height: 0; }
+
+        #page {
+            position: static;
+            background: none;
+            border: none;
+            @include border-image(none);
+            &:before {
+                position: static;
+                width: 0;
+                margin: 0;
+                border: none;
+            }
+        }
+        #navigation { background: none; }
+
+        #logo-container {
+            #logo-bg { padding-top: rhythm(1); }
+            position: static;
+            width: columns(2);
+            margin: 0;
+            h1 { height: rhythm(6); }
+        }
+
+        nav {
+            position: relative;
+            top: rhythm(1);
+            left: gutter();
+            width: columns(10);
+            margin: 0;
+            li {
+                float: left;
+                width: columns(2, 10);
+                height: rhythm(6);
+                margin-left: gutter(10);
+                &:first-child { margin-left: 0; }
+            }
+            @for $i from 1 through $tab-count {
+                li#tab-header-#{$i} { background-image: image-url('tab-headers/tab-header_#{$i}.png', false, false); }
+            }
+            a { height: rhythm(3); text-align: center; margin-top: rhythm(2); }
+        }
+        #tab-backgrounds {
+            width: 100%;
+            height: rhythm(1);
+            position: relative;
+        }
+        .tab-base { float: left; height: rhythm(1); position: relative; }
+        .tab-background { height: $tab-background-height; width: 100%; position: absolute; }
+        @for $i from 1 through $tab-count {
+            #tab-base-#{$i} { @include sprite-background-position($tab-bases, "tab-base_#{$i}"); }
+            #tab-background-#{$i} { top: ($i - 1) * $tab-background-height; z-index: $i; }
+            .tab-active-#{$i} {
+                @for $j from 1 through $tab-count {
+                    $position: $tab-count - (($j - $i) % $tab-count);
+                    #tab-base-#{$j} { z-index: $position; }
+                    #tab-background-#{$j} { @include sprite-background-position($tab-bases, "tab-base_#{$position}"); }
+                }
+            }
+        }
+        .tab-base { margin-right: gutter(); width: columns(2); }
+        #tab-base-#{$tab-count} { margin-right: 0; @include sprite-background-position($tab-bases, "tab-base_#{$tab-count}"); }
+
+        .head:before { height: rhythm(2); }
+        #content {
+            @include paper();
+        }
+
+        @for $i from 1 through $tab-count {
+        }
+    }
+}
+.ie-clear { display: none }
+.ie {
+    body {
+        nav {
+            position: static;
+            li { margin: 0 }
+        }
+        #logo-container #logo-bg { padding-top: 0; }
+        #tab-backgrounds { display: none; }
+        .ie-clear { display: inline; clear: both; }
+    }
+}
+
+@include at-breakpoint($full){
+    #navigation { @include adjust-font-size-to($base-font-size); }
+    #logo-container h1 { height: rhythm(7); }
+    nav li { height: rhythm(7); }
+}
+
+.main {
+    p, h1, h2, h3, h4, h5, h6 { padding-left: gutter() * 2; padding-right: gutter() * 2; }
+    a { color: $text-colour; }
+}
+
+.highlight {
+    display: inline-block;
+    position: relative;
+    a { position: relative; }
+    &:before {
+        background-color: $highlight-colour;
+        content: '';
+        position: absolute;
+        top: rhythm(1/6);
+        left: -0.15em;
+        right: -0.15em;
+        height: rhythm(2/3);
+        @include skewX(-20deg);
+    }
+}
+
+.ie .highlight {
+    position: static;
+    display: inline;
+    a { position: static; }
+    &:before {
+        content: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, nav li, figcaption { @include heading(); }
+p, span, #content .main li  { @include plaintext(); }
+#content .main {
+    p, ul, ol {
+        margin-bottom: rhythm(1);
+        margin-top: rhythm(1);
+    }
+    ul, ol { @include pad(1,1); }
+    ol { list-style: decimal outside; }
+    ul { list-style: disc outside; }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Polaroids */
+
+figure {
+    display: block;
+    max-width: columns(7);
+    @include squish(1, 1);
+    @include at-breakpoint($medium){
+        float: right;
+        max-width: columns(5);
+        margin-left: gutter();
+        margin-right: gutter();
+        &.wide-image {
+            float: none;
+            max-width: columns(10);
+            margin-left: gutter(9) * 2;
+            margin-right: gutter(9) * 2;
+        }
+    }
+    @include at-breakpoint($full){
+        &.wide-image {
+            float: none;
+            max-width: columns(16);
+            margin-left: gutter(9) * 2;
+            margin-right: gutter(9) * 2;
+        }
+    }
+    padding: rhythm(1/2) 0.5 * gutter();
+    background: shade($page-colour, 10);
+    @include background(linear-gradient(top, shade($page-colour, 20) , shade($page-colour, 5)  20%, shade($page-colour, 10) 60%));
+    @include box-shadow($tab-background-height $tab-background-height 2 * $tab-background-height 0 - $tab-background-height rgba(0, 0, 0, .75));
+    img { max-width: 100%; }
+    figcaption { text-align: center; }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Events */
+
+.events h3 { padding-left: gutter() * 2; padding-right: gutter() * 2; }
+
+.event-info > span {
+    display: block;
+    padding-left: gutter() * 2;
+    padding-right: gutter() * 2;;
+}
+
+#content .events ul {
+    @include margin-leader();
+    @include margin-trailer();
+    @include span-columns(7);
+    @include pad(1);
+    clear: both;
+    li {
+        float: left;
+        display: block;
+        background: $postit-colour;
+        height: 0;
+        width: 100%;
+        padding-bottom: 100%;
+        margin-bottom: rhythm(2);
+        @include box-shadow($tab-background-height $tab-background-height 2 * $tab-background-height 0 - $tab-background-height rgba(0, 0, 0, .75));
+        $rotation: 3deg;
+        $shift: $tab-background-height;
+        @include rotate($rotation);
+        &:nth-child(2n) { @include rotate(-1 * $rotation); position: relative; top: 2 * $shift; }
+        &:nth-child(3n) { @include rotate(2 * $rotation); postion: relative; top: -1 * $shift; }
+        &:nth-child(5n) { @include rotate(-2 * $rotation); postion: relative; top: $shift; }
+        a { color: $text-colour; }
+        > span { display: block; }
+        h4 { margin-top: 2 * $shift; }
+    }
+    li.special { background: $special-postit-colour; }
+    @include at-breakpoint($medium) {
+        @include span-columns(10);
+        @include pad(1);
+        li {
+            @include span-columns(5, 10);
+            padding-bottom: columns(5, 10);
+            margin-right: gutter(10);
+            &:nth-child(2n) { margin-right: 0; }
+        }
+    }
+    @include at-breakpoint($full) {
+        @include span-columns(16);
+        @include pad(1);
+        li {
+            @include span-columns(4, 16);
+            padding-bottom: columns(4, 16);
+            margin-right: gutter(16);
+            &:nth-child(2n) { margin-right: gutter(16); }
+            &:nth-child(4n) { margin-right: 0; }
+        }
+    }
+}
+.ie body #content .events ul {
+    @include span-columns(7);
+    li { margin-right: gutter(10) / 2; }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Page-specific */
+
+/* Homepage */
+
+#social {
+    display: block;
+    h3, p {
+        margin-bottom: rhythm(1);
+        padding-left: gutter() * 2;
+        padding-right: gutter() * 2;
+    }
+    p a { color: $text-colour; }
+    div {
+        width: 100% - 2 * gutter();
+        margin: auto;
+    }
+}
+
+#facebook {
+    border:none;
+    overflow:hidden;
+    background: $page-colour;
+    height:600px;
+    width: 100%;
+    @include at-breakpoint($medium) { @include span-columns(5); @include post(2) };
+    @include at-breakpoint($full) { @include span-columns(8); @include post(2) };
+}
+
+#twitter, #twitter-widget-0 {
+    width: 100%;
+    @include at-breakpoint($medium) { @include span-columns(5 omega); };
+    @include at-breakpoint($full) { @include span-columns(8 omega); };
+}
+
+/* Contact */
+
+#mailing_signup {
+    border: 1px solid;
+    background: $page-colour;
+    height:700px;
+    margin-left: gutter() * 2;
+}
+

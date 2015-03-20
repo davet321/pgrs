@@ -1,0 +1,79 @@
+---
+extension: html
+filter:
+  - erb
+  - basepath
+tab:       1
+---
+<!DOCTYPE html>
+
+<!--[if lt IE 9]> <html class="ie"> <![endif]-->
+<!--[if gte IE 9]> <html> <![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>
+        PGRS &ndash; University of Strathclyde Postgraduate Researchers Society
+        <% if @page.filename != 'index' %>
+            &ndash; <%= @page.title %>
+        <% end %>
+   </title>
+   <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen, projection">
+   <link href='http://fonts.googleapis.com/css?family=Merienda:700|Libre+Baskerville' rel='stylesheet' type='text/css'>
+   <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-42640409-1', 'pgrs.org.uk');
+     ga('send', 'pageview');
+   </script>
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <script src="/scripts/scripts.js"></script>
+   <%# <script src="http://192.168.1.68:8081/target/target-script-min.js"></script> %>
+</head>
+<body>
+
+    <div id="container">
+        <div id="spacer"></div>
+        <div id="page" class="tab-active-<%= @page.tab %>">
+            <div id="navigation">
+                <div id="logo-container"><div id="logo-bg"><h1><a href="/index.html">PGRS</a></h1></div></div>
+                <nav>
+                    <ul>
+                        <li id="tab-header-2"><a href="/events.html"><span class="icons-events"></span>Events</a></li>
+                        <li id="tab-header-3"><a href="/phd.html"><span class="icons-phd"></span>PhDs</a></li>
+                        <li id="tab-header-4"><a href="/glasgow.html"><span class="icons-glasgow"></span>Glasgow</a></li>
+                        <li id="tab-header-5"><a href="/about.html"><span class="icons-about"></span>About</a></li>
+                        <li id="tab-header-6"><a href="/contact.html"><span class="icons-mail"></span>Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="tab-backgrounds">
+                    <div id="tab-background-1" class="tab-background"></div>
+                    <div id="tab-background-2" class="tab-background"></div>
+                    <div id="tab-background-3" class="tab-background"></div>
+                    <div id="tab-background-4" class="tab-background"></div>
+                    <div id="tab-background-5" class="tab-background"></div>
+                    <div id="tab-base-1" class="tab-base"></div>
+                    <div id="tab-base-2" class="tab-base"></div>
+                    <div id="tab-base-3" class="tab-base"></div>
+                    <div id="tab-base-4" class="tab-base"></div>
+                    <div id="tab-base-5" class="tab-base"></div>
+                    <div id="tab-base-6" class="tab-base"></div>
+                </div>
+                <br class="ie-clear"/>
+            </div>
+            <div id="content">
+                <div class="main"> <%# This div appears to close below, but it can actually be closed inside the main content, and another one reopened %>
+                    <div class="head"> <h2> <% if @page.event %> <span class="icons-<%= @page.category %> event-icon"></span> <% end %> <%= @page.title %> </h2> </div>
+                    <%= @content %>
+                    <br style="clear:both"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+output
+*.swp
+.sass-cache/
+previous_output/
+.bundle/
+Gemfile.lock

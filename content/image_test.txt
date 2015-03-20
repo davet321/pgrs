@@ -1,0 +1,16 @@
+---
+title:       About PGRS
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab:         1
+---
+<%= polaroid('castle99.jpg', 'Join In') %>
+<%= polaroid('castle90.jpg', 'Join In') %>
+<%= polaroid('castle80.jpg', 'Join In') %>
+<%= polaroid('castle70.jpg', 'Join In') %>
+<%= polaroid('castle99x2.jpg', 'Join In') %>
+<%= polaroid('castle90x2.jpg', 'Join In') %>
+<%= polaroid('castle80x2.jpg', 'Join In') %>
+<%= polaroid('castle70x2.jpg', 'Join In') %>

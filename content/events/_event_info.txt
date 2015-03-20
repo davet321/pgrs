@@ -1,0 +1,9 @@
+---
+filter: erb
+---
+<div class="event-info">
+    <span class="date"><span class="icons-date event-icon"></span><time datetime="<%= @page.datetime.strftime('%Y-%m-%dT%H:%M:%SZ') %>"><%= @page.datetime.strftime('%A %-d %B') %></time></span>
+    <span class="time"><span class="icons-time event-icon"></span><%= @page.datetime.strftime('%H:%M') + (@page.endtime ? ' &ndash; ' + @page.endtime.strftime('%H:%M') : '') %></span>
+    <span class="location"><span class="icons-location event-icon"></span><%= @page.full_location || @page.location %></span>
+</div>
+

@@ -1,0 +1,20 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-10-15T17:30:00Z
+location: The Drum and Monkey
+full_location: The Drum and Monkey, 91 St Vincent St, G2 5TF
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the pub to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.
+
+This week we'll be in <span class="highlight">[The Drum and Monkey](http://www.nicholsonspubs.co.uk/thedrumandmonkeystvincentstreetglasgow/)</span>, a traditional style pub offering a range of real ales and pub food, alongside a variety of other drinks.

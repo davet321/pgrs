@@ -1,0 +1,20 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-09-24T17:30:00Z
+location: The Hielan Jessie
+full_location: The Hielan Jessie, 374 Gallowgate, G4 0TX
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the pub to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.
+
+This week we'll be in The Hielan Jessie.

@@ -1,0 +1,20 @@
+---
+title: Postgraduate Induction
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: generic
+datetime: 2013-10-17T08:45:00Z
+endtime: 2013-10-17T16:00:00Z
+location: University
+---
+<%= polaroid('rdp.png', 'Researcher Development Programme') %>
+<%= render(:partial=>"event_info") %>
+
+Organised by the <span class="highlight">[RDP](http://www.strath.ac.uk/rdp/)</span>, the Postgraduate Induction is a full-day event for all new postgraduate research students.
+Places can be booked through the <span class="highlight">[online booking system](https://bookings.strath.ac.uk/courseDetails.asp?course=PGRI)</span>.
+Following the induction, PGRS will be running a <span class="highlight">[pub quiz](drink_20131017.html)</span> and opportunity for you to meet your fellow postgraduates in the Union.

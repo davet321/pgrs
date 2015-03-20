@@ -1,0 +1,23 @@
+---
+filter: erb
+---
+</div>
+
+<div class="events <%= clazz %>">
+    <h3>Upcoming Events</h3>
+    <ul class="fix-rhythm">
+        <% events = @pages.find(:all, :in_directory => "events", :sort_by => "datetime") %>
+        <% events.each do |page| %>
+            <% if page.datetime > Time.now %>
+                <li class="event <%= page.event_class %>">
+                    <h4><span class="icons-<%= page.category %> event-icon"></span><a href="<%= page.url %>"><%= page.title %></a></h4>
+                    <span class="date"><span class="icons-date event-icon"></span><time datetime="<%= page.datetime.strftime('%Y-%m-%dT%H:%M:%SZ') %>"><%= page.datetime.strftime('%a %-d %b') %></time></span>
+                    <span class="time"><span class="icons-time event-icon"></span><%= page.datetime.strftime('%H:%M') + (page.endtime ? ' &ndash; ' + page.endtime.strftime('%H:%M') : '') %></span>
+                    <span class="location"><span class="icons-location event-icon"></span><%= page.location %></span>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>
+
+<div>

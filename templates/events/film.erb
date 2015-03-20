@@ -1,0 +1,18 @@
+---
+title: Film Night
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: film
+datetime: <%= datetime %>
+location: The Lounge
+---
+<%%= polaroid('film.jpg', 'Film night') %>
+<%%= render(:partial=>"event_info") %>
+
+Join us for our monthly film night, in the Lounge on Level 5 of the Union (not the Postgraduate Lounge!).
+Come from 6.30ish if you want to order pizza or half 7 for the movie.

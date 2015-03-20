@@ -1,0 +1,21 @@
+---
+title: Scottish Film Night
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: film
+datetime: 2013-10-01T18:30:00Z
+location: The Lounge
+full_location: The Lounge, Level 5, The Union
+---
+<%= polaroid('angels.jpg', "The Angels' Share") %>
+<%= render(:partial=>"event_info") %>
+
+Join us for our monthly film night, in the Lounge on Level 5 of the Union (not the Postgraduate Lounge!).
+This month we'll be showing The Angels' Share, a comedy-drama film directed by Ken Loach.
+Come from 6.30ish if you want to order pizza or half 7 for the movie.
+Let us know on <span class="highlight">[Facebook](https://www.facebook.com/events/533150860096401/?ref=2)</span> if you're coming.

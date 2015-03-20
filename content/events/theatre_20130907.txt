@@ -1,0 +1,28 @@
+---
+title: Proms In The Garden
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: theatre
+event_class: special
+datetime: 2013-09-07T19:00:00Z
+location: Glasgow Green
+---
+<%= polaroid('proms.jpg', 'BBC Proms in the Park', 'Credit: JohnED76 \(CC BY-NC-ND\) - http://www.flickr.com/photos/bodgerbrooks/1350857187') %>
+<%= render(:partial=>"event_info") %>
+
+As part of the BBC's Last Night of the Proms, a variety of musical performers will be in Glasgow Green to perform live, and we're planning on being there.
+Well, nearly there.
+
+Rather than join the main crowd, our ex-president has kindly offered up his flat and garden.
+Which'll basically be the same, but cheaper and with easier access to food and drink*.
+If the weather's dry and the wind's good we should be able to hear it all from there.
+If not, well then we can sit inside and put it on the TV instead, while laughing at everyone who paid to sit in the rain.
+Or something.
+
+Let us know if you're coming by signing up on <span class="highlight">[Facebook](https://www.facebook.com/events/510022235751174/)</span>.
+
+\* Although you will of course have to bring some

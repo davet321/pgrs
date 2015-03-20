@@ -1,0 +1,19 @@
+---
+title: Freshers' Fair
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: generic
+event_class: special
+datetime: 2013-09-18T10:00:00Z
+endtime: 2013-09-18T15:00:00Z
+location: Union
+---
+<%= polaroid('freshers.jpg', 'Freshers\' Week \'13') %>
+<%= render(:partial=>"event_info") %>
+
+It's time to welcome this year's crop of new students, and PGRS will be in attendance at the Freshers' Fair.
+Drop by to find out more about the Society, and all the other societies the Union has to offer.

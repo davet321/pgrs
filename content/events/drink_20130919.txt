@@ -1,0 +1,19 @@
+---
+title: Postgraduate Welcome
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+event_class: special
+datetime: 2013-09-19T16:00:00Z
+location: Union
+full_location: Union, Priory & Debates Chamber
+---
+<%= polaroid('freshers.jpg', 'Freshers\' Week \'13') %>
+<%= render(:partial=>"event_info") %>
+
+As part of Freshers' Week the Union will be putting on a welcome event for all the new postgraduate students.
+Free food and drink will be provided!

@@ -1,0 +1,19 @@
+---
+title:       Postgraduate Researchers Society
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab:         1
+---
+<%= polaroid('castle.jpg', 'Join In') %>
+
+The Postgraduate Researchers Society is a social group for all research postgraduates at Strathclyde.
+This is your opportunity to meet other research students from across the university.
+We will hold regular social events throughout the year with our main event being the week long Postgraduate Festival.
+We are a brand new society run by student for students, so for those of you who want to, you are more than welcome to get involved in running the society and organising events as well.
+If you would like to know more please <span class="highlight">[email us](mailto:pgrs.strath@gmail.com)</span> or find us on <span class="highlight">[Facebook](http://www.facebook.com/PGRSstrath)</span>.
+
+<%= render(:partial=>"events_list", :locals => {:clazz => 'hide-events split-events' }) %>
+
+<%= render(:partial=>"social") %>

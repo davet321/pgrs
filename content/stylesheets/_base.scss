@@ -1,0 +1,55 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "susy";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+$total-columns  : 9;
+$column-width   : 2em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : true;
+$medium: 12 ie;
+$full: 18;
+
+$tab-count: 6;
+$tab-background-height: rhythm(1 / ($tab-count - 1));
+$border-width: 4; // This is a pixel value, but not set in pixels since it's used in a border-image-slice declaration. Also it should match the value used in generate_images
+$background-colour: #08377D;
+$page-colour: #FFFFFF;
+$text-colour: #000000;
+$postit-colour: #FFFFCC;
+$special-postit-colour: #CCFFCC;
+$highlight-colour: #FF6DF0;
+$horizontal-rule-colour: #D9EAF2;
+$vertical-rule-colour: #EFE4E4;
+$tab-colours: ( #F0F2F3 #685D94 #945D8A #94685D #89945D #5D9468 );
+@mixin heading {
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+}
+@mixin plaintext {
+ font-family: 'Libre Baskerville', serif;
+}
+
+@mixin paper {
+    position: relative;
+    background: $page-colour;
+    @include background(linear-gradient(top, $horizontal-rule-colour 0%, $page-colour 8%) 0 0-(0.8*$base-leader));
+    @include background-size(100% rhythm(1));
+    border: #{$border-width}px solid $page-colour;
+    &:before { // Draws the two lines down the side of the paper
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0.8 * gutter();
+        width: 0.2 * gutter();
+        margin: $tab-background-height 0;
+        border: 1px solid;
+        border-color: transparent $vertical-rule-colour;
+    }
+}

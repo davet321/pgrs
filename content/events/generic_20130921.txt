@@ -1,0 +1,21 @@
+---
+title: Doors Open Day
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+event_class: special
+category: museum
+datetime: 2013-09-21T12:00:00Z
+location: Glasgow Cross
+---
+<%= polaroid('chambers.jpg', 'Glasgow City Chambers', 'Credit: Colin Campbell \(CC BY-NC-ND\) - http://www.flickr.com/photos/96684313@N00/4683449981/') %>
+<%= render(:partial=>"event_info") %>
+
+Next weekend is Doors Open Day, a celebration of some of Glasgow's built heritage and a chance to get inside some buildings that aren't normally open to the public.
+
+We'll meet at the steeple at Glasgow Cross at 12. From there the tentative plan is to head east to the famous Barrowlands Ballroom music venue, before going back and south to the Sheriff Courts, and back in to the Merchant City to visit Merchant's House, Trades Hall and finish up in the City Chambers.
+
+We might take in a few others on the way as well, and if anyone's got any suggestions for doing anything else, leave a comment on <span class="highlight">[Facebook](https://www.facebook.com/events/422638124507722/)</span>.

@@ -1,0 +1,20 @@
+---
+title: Pub Tuesday
+filter:
+  - erb
+  - markdown
+  - smartypants
+tab: 2
+event: true
+category: drink
+datetime: 2013-09-10T17:00:00Z
+location: The Piper
+full_location: The Piper, 57 Cochrane Street, G1 1HL
+---
+<%= polaroid('pub.jpg', 'In the Ark') %>
+<%= render(:partial=>"event_info") %>
+
+You've had a hard day, so join us in the pub to relax with a drink and some food at the end of the day.
+Even if you haven't had a hard day, join us anyway.
+
+This week we're in The Piper, on the corner of George Square, at Cochrane Street and South Frederick Street.
